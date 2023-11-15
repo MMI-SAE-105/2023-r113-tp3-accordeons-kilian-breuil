@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon avec x-collapse</title>
+    <title>Accordéon avec des booléens</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
-    <h1>Accordéon avec <code>x-collapse</code></h1>
+    <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon">
+      <section x-data="{expanded: false}">
+        <button @click="expanded = ! expanded">bouton 1</button>
+        <p x-show="expanded" x-collapse.duration.1000ms>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam assumenda error perferendis ab explicabo saepe est nobis expedita corrupti maiores, reiciendis facilis et aliquam non nemo accusamus dolores inventore laudantium.</p>
+      </section>
+      <section x-data="{expanded: false}">
+        <button @click="expanded = ! expanded">bouton 2</button>
+        <p x-show="expanded" x-collapse.duration.1000ms>Impedit voluptate corrupti rem sint laudantium possimus. Laudantium fuga nostrum aspernatur, assumenda commodi, rem expedita optio alias minus illum deserunt nobis natus? Eius dolorem ipsa vitae! Ducimus provident iste eius.</p>
+      </section>
+      <section x-data="{expanded: false}">
+        <button @click="expanded = ! expanded">bouton 3</button>
+        <p x-show="expanded" x-collapse.duration.1000ms>Molestiae nam voluptate, voluptatibus quibusdam ipsam corrupti reiciendis optio assumenda ducimus dolorum perferendis impedit inventore eveniet consectetur. Molestias earum nobis odio quam natus! Voluptatem, atque eligendi delectus nemo praesentium consequuntur.</p>
+      </section>
+    </div>
   </body>
 </html>
