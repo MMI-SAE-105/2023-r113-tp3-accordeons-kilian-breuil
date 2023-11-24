@@ -12,24 +12,34 @@
     <div id="onglets" x-data="{
       ouvert : 1,
      }">
-     <ul role="tablist">
-      <li role="tab">Onglet 1</li>
-      <li role="tab">Onglet 2</li>
-      <li role="tab">Onglet 3</li>
-     </ul>
      <div>
-      <div role="tabpanel" x-show="ouvert === 1">
-        <h1>Panneau 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dignissimos voluptatum, veritatis eveniet sed eligendi velit incidunt animi mollitia, nulla vel autem. Excepturi reprehenderit doloremque consectetur et quo atque?</p>
+      <div role="tabpanel" @click="ouvert=1">
+        <button>Panneau 1</button>
+        <div x-show="ouvert === 1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, numquam. Dolore cum adipisci odit omnis quia soluta nisi sint voluptates inventore sequi obcaecati voluptate laborum, eveniet explicabo totam doloremque deleniti!</p>
+          <ul role="tablist">
+          <li role="tab">Onglet 1</li>
+          <li role="tab">Onglet 2</li>
+          <li role="tab">Onglet 3</li>
+        </ul>
       </div>
-      <div role="tabpanel" x-show="ouvert === 2">
-        <h1>Panneau 2</h1>
-        <p>Cupiditate exercitationem autem earum qui recusandae inventore itaque. Nemo ipsum modi quisquam distinctio expedita laudantium odit consequuntur harum quis earum perspiciatis illo reiciendis sit reprehenderit adipisci aperiam similique, animi est!</p>
+    </div>
+      <div role="tabpanel" @click="ouvert = 2">
+        <button>Panneau 2</button>
+        <div x-show="ouvert === 2">
+          <p>Fuga, quisquam iste aut nobis illo amet doloribus officia dicta dolorum voluptas, eius qui esse. Saepe, quisquam? Sit nesciunt similique commodi adipisci quo itaque in, repellendus vel natus doloremque veritatis?</p>
+          <ul role="tablist">
+            <li role="tab">Onglet 1</li>
+            <li role="tab">Onglet 2</li>
+            <li role="tab">Onglet 3</li>
+          </ul>
+        </div>
       </div>
       <div role="tabpanel" x-show="ouvert === 3">
         <h1>Panneau 3</h1>
-        <p>Blanditiis, excepturi asperiores? Saepe sint commodi, magni quam maiores asperiores voluptatum quaerat vel! Ullam sint esse consequatur earum laudantium nostrum deleniti, necessitatibus iusto, placeat ipsa repellendus totam rerum magni. Placeat!</p>
+        <p>Maxime impedit magnam adipisci quasi deserunt laudantium earum, ducimus dolor ipsa quis libero exercitationem dolores debitis enim id rem molestias magni inventore at? Ab eius iste veritatis itaque, quia saepe.</p>
       </div>
+     </div>
      </div>
   </body>
 </html>
